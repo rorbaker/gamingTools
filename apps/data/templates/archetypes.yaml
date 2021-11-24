@@ -1,0 +1,47 @@
+- Template: Rogue
+  Category: Archetype
+  Attributes:
+    Dexterity: 80
+    Reflexes: 80
+    Senses: 50
+    Intelligence: 50
+  Psych:
+    Calmness: 25
+    Selfishness: 50
+
+- Template: Warrior
+  Category: Archetype
+  Attributes:
+    Strength: 75
+    Constitution: 75
+    Endurance: 50
+    Dexterity: 30
+
+- Template: Mage
+  Category: Archetype
+  Attributes:
+    Intelligence: 90
+    Essence: 75
+    Willpower: 75
+  Psych:
+    Passion: 25
+
+- Template: Cleric
+  Category: Archetype
+  Attributes:
+    Empathy: 75
+    Willpower: 75
+    Constitution: 50
+    Intelligence: 40
+    Strength: 25
+  Psych:
+    Passion: 25
+    Trust: 25
+    Honesty: 25
+
+- Template: Psionics
+  Category: Archetype
+  Attributes:
+    Endurance: 75
+    Empathy: 75
+    Intelligence: 50

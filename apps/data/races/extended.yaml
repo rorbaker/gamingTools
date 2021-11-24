@@ -1,0 +1,14 @@
+race:
+  - name: Lizardman
+    Profile:
+      Height: =3d6 +78
+      Weight: =10d20 +250
+      Fate Points: =1d10
+      Contact Level: =1d6+1    
+    Attributes:
+      Strengh: +1
+      Constitution: +1
+      Reflexes: -1
+    Psycholgical:
+      Calmness: -2
+      Passion: -2

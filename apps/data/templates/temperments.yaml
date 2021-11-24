@@ -1,0 +1,11 @@
+- Template: Good
+  Category: Temperment
+  Psych:
+    Loyalty: 25
+    Honesty: 25
+
+- Template: Evil
+  Category: Temperment
+  Psych:
+    Selfnishness: 30
+    Cruelty: 30
