@@ -51,3 +51,33 @@ def apply_stats_templates(stat_names, raw_stats, stat_templates):
     return dict([(k, s) for (k, v), s in zip(order_stats, raw_stats)])
 
 
+def distribute_values(names, raw_values, templates):
+    weighted_names = created_weighted_list(names)
+
+    ordered_weighted_names = apply_templates(weighted_names, templates)
+
+    ## pp.pprint(ordered_weighted_names)
+
+    return assign_weighted_values(ordered_weighted_names, raw_values)
+
+## given a list of items, return a dictionary of item,weight pairs
+def created_weighted_list(a_list):
+  alpha_list = a_list
+  alpha_list.sort
+  weights = dice.roll_dice(len(alpha_list), 100)
+  return dict(zip(alpha_list, weights))
+
+## apply 0 to many templates to the weights
+def apply_templates(weighted_list, templates):
+  for t in templates:
+      weighted_list =dict( Counter(weighted_list) + Counter(t) )
+
+  return sorted(weighted_list.items(), key=lambda x:x[1], reverse=True)
+
+## corelate a weighted list with sorted values
+def assign_weighted_values(weighted_list, ordered_values):
+  return dict([(k,s) for (k,v),s in zip (weighted_list, ordered_values)])
+
+
+
+
