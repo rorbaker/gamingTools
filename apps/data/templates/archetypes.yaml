@@ -16,6 +16,7 @@
     Constitution: 75
     Endurance: 50
     Dexterity: 30
+  Psycholgical:
 
 - Template: Mage
   Category: Archetype
@@ -23,7 +24,7 @@
     Intelligence: 90
     Essence: 75
     Willpower: 75
-  Psych:
+  Psycholgical:
     Passion: 25
 
 - Template: Cleric
@@ -34,7 +35,7 @@
     Constitution: 50
     Intelligence: 40
     Strength: 25
-  Psych:
+  Psycholgical:
     Passion: 25
     Trust: 25
     Honesty: 25
@@ -45,3 +46,4 @@
     Endurance: 75
     Empathy: 75
     Intelligence: 50
+  Psycholgical:
