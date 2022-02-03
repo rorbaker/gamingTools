@@ -1,11 +1,11 @@
 - Template: Good
   Category: Temperment
-  Psycholgical:
-    Loyalty: 25
-    Honesty: 25
+  Psychological:
+    Loyalty: 75
+    Honesty: 75
 
 - Template: Evil
   Category: Temperment
-  Psycholgical:
-    Selfnishness: 30
-    Cruelty: 30
+  Psychological:
+    Selfishness: 75
+    Cruelty: 75

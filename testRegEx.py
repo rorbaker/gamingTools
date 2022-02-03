@@ -26,7 +26,12 @@ sample_dice_str = ('1d6'
 ,'P 17'
 ,' P3 t2'
 , 'sfasdf'
-,'2D +1')
+,'2D +1'
+,'3 +1'
+,'2 * 1.5'
+, 'sss 42'
+, ' 43 ignore wordst'
+, '0')
 
 for s in sample_dice_str:
     #print(f'processing {s:20}')

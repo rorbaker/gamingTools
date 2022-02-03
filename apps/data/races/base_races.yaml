@@ -1,30 +1,45 @@
-race:
-  - name: Elf
-    Profile:
-      Height: =3d6 +56
-      Weight: =3d20 +100
-      Fate Points: =1d10
-      Contact Level: =1d6+1    
-    Attributes:
-      Strengh: -1
-      Constitution: -1
-      Intelligence: +1
-      Dexterity: +1
-    Psycholgical:
-      Calmness: +2
-      Passion: -2
+- Race: Elf
+  Profile:
+    Height: =3d6 +56
+    Weight: =3d20 +100
+    Fate Points: =1d10
+    Contact Level: =1d6+1    
+  Attributes:
+    Strengh: -1
+    Constitution: -1
+    Intelligence: +1
+    Dexterity: +1
+  Psycholgical:
+    Calmness: +2
+    Passion: -2
 
-  - name: Dwarf
-    Profile:
-      Height: =2d8 +42
-      Weight: =6d20 +130
-      Fate Points: =1d10
-      Contact Level: =1d6+1    
-    Attributes:
-      Strengh: +1
-      Constitution: +1
-      Reflexes: -1
-      Empathy: -1
-    Psycholgical:
-      Selfishness: +3
-      Humor: -2
+- Race: Dwarf
+  Profile:
+    Height: =2d8 +42
+    Weight: =6d20 +130
+    Fate Points: =1d10
+    Contact Level: =1d6+1    
+  Attributes:
+    Strength: +1
+    Constitution: +1
+    Reflexes: -1
+    Empathy: -1
+  Psycholgical:
+    Selfishness: +3
+    Humor: -2
+
+- Race: SMURF
+  Profile:
+    Height: =2d8 +42
+    Weight: =6d20 +130
+    Fate Points: =1d10
+    Contact Level: =1d6+1    
+  Attributes:
+    Strength: +100
+    Constitution: 10d6
+    Reflexes: -10
+    Empathy: '*2'
+    Senses: =32
+  Psycholgical:
+    Selfishness: /10
+    Humor: 10t2

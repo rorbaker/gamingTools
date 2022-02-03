@@ -10,22 +10,37 @@ import modules.templates as templates
 
 import pprint as pp
 
-race_definitions = templates.read_race_templates( os.path.join( 'data', 'races'))
-template_definitions = templates.read_templates( os.path.join( 'data', 'templates'))
+import argparse
 
-# pp.pprint(template_definitions)
-# pp.pprint(template_definitions.keys())
 
-### TODO: figure out how to accept command line input to select templates
+####  main starts here
+parser = argparse.ArgumentParser(description='Generate Random character based on templates')
+parser.add_argument('--Race', '-r', metavar='race', help='The Character\'s Race', default='Human')
+parser.add_argument('--Name', '-n', metavar='name', help='The Character\'s Name', required=True)
+parser.add_argument('--Temperment', '-t', metavar='temperment', help='Template to be used for pyshcological profile', nargs='*', required=False, default=[])
+parser.add_argument('--Architype', '-a', metavar='architype', help='Template to be used for architype', nargs='*', required=False, default=[])
 
-use_templates = {key: value for key, value in template_definitions.items() if dice.get_simple_result(1, 10) < 4}
 
+args = parser.parse_args()
+
+allTemplates = args.Temperment 
+allTemplates.extend( args.Architype)
+
+pp.pprint(args)
+
+pp.pprint(templates.race_definitions)
+
+raceSettings = templates.race_definitions[args.Race]
+pp.pprint(raceSettings)
+
+
+use_templates = dict((k, templates.template_definitions[k]) for k in allTemplates if k in templates.template_definitions)
 pp.pprint(use_templates.keys())
 
 attribute_templates = {k:v.get('Attributes') for (k, v) in use_templates.items()}
-pysch_templates = {k:v.get('Psych') for (k, v) in use_templates.items()}
+pysch_templates = {k:v.get('Psychological') for (k, v) in use_templates.items()}
 
-my_char = rpgCharacter.rpgCharacter('bill', 'human')
+my_char = rpgCharacter.rpgCharacter(args.Name)
 
 raw_stats = statsGenerators.generate_avg_stats(10, 12, 40, 60)
 
@@ -37,7 +52,8 @@ final_psych = templates.distribute_values(coreRules.psych_display_order, raw_psy
 
 my_char.set_psych(final_psych)
 
-my_char.dump_character()
+my_char.set_race(raceSettings)
 
+my_char.dump_character()
 
 
